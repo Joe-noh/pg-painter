@@ -3,6 +3,7 @@
 import argparse
 import edge
 import binarize
+import quantize
 
 def main():
     parser = argparse.ArgumentParser()
@@ -11,7 +12,8 @@ def main():
     args = parser.parse_args()
 
     if args.input and args.output:
-        binarize.binarize(args.input, args.output)
+        quantize.quantize(args.input, args.output)
+#        binarize.binarize(args.input, args.output)
 
 if __name__ == "__main__":
     main()
